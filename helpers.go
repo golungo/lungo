@@ -14,3 +14,7 @@ func GetCollection(name string) *mongo.Collection {
 func NewObjectID() ObjectID {
 	return primitive.NewObjectID()
 }
+
+func ObjectIDFromHex(s string) (ObjectID, error) {
+	return primitive.ObjectIDFromHex(s)
+}
