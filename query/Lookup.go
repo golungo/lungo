@@ -6,7 +6,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 )
 
-func (m Model) Populate(fields lungo.Fields) Model {
+func (m Model) Lookup(fields lungo.Fields) Model {
 	if m.ifError() {
 		return m
 	}

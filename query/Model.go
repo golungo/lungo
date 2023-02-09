@@ -29,7 +29,6 @@ type Model struct {
 
 func (m Model) Init(collectionName string, types reflect.Type) Model {
 	m.collection = lungo.GetCollection(collectionName)
-	m.refs = lungo.GetRefs(types)
 
 	_types := map[string]string{}
 

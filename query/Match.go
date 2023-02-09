@@ -6,7 +6,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 )
 
-func (m Model) Find(filter lungo.Filter) Model {
+func (m Model) Match(filter lungo.Filter) Model {
 	if m.ifError() {
 		return m
 	}

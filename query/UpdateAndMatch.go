@@ -7,7 +7,7 @@ import (
 	"github.com/golungo/lungo"
 )
 
-func (m Model) FindAndUpdate(filter lungo.Filter, update interface{}) Model {
+func (m Model) UpdateAndMatch(filter lungo.Filter, update interface{}) Model {
 	if m.ifError() {
 		return m
 	}
@@ -20,5 +20,5 @@ func (m Model) FindAndUpdate(filter lungo.Filter, update interface{}) Model {
 		return m.setError(err.Error())
 	}
 
-	return m.Find(filter)
+	return m.Match(filter)
 }

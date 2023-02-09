@@ -24,5 +24,5 @@ func (m Model) Create(data interface{}) Model {
 		"_id": result.InsertedID,
 	}
 
-	return m.Find(filter)
+	return m.Match(filter)
 }
