@@ -3,6 +3,7 @@ package lungo
 import (
 	"reflect"
 
+	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
@@ -26,4 +27,8 @@ func GetRefs(t reflect.Type) map[string]string {
 	}
 
 	return result
+}
+
+func NewObjectID() ObjectID {
+	return primitive.NewObjectID()
 }
