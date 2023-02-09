@@ -1,4 +1,5 @@
 # A fast and simple Mongo DB driver for Go.
 
-## TODO:
-- Write a Readme
+Example and Documentation:
+[lungo.dev/docs](https://lungo.dev/docs)
+
