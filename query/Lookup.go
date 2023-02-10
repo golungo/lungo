@@ -31,28 +31,6 @@ func (m Model) Lookup(fields lungo.Fields) Model {
 								Value: v.foreignField,
 							},
 							bson.E{
-								Key: "pipeline",
-								Value: bson.A{
-									bson.D{
-										bson.E{
-											Key: "$sort",
-											Value: bson.D{
-												bson.E{
-													Key:   "_id",
-													Value: -1,
-												},
-											},
-										},
-									},
-									bson.D{
-										bson.E{
-											Key:   "$limit",
-											Value: 5,
-										},
-									},
-								},
-							},
-							bson.E{
 								Key:   "as",
 								Value: v.as,
 							},
