@@ -11,7 +11,7 @@ func (m Model) Match(filter lungo.Filter) Model {
 		return m
 	}
 
-	if filter != nil {
+	if len(filter) != 0 {
 		var match bson.D
 
 		for fieldName, fieldValue := range filter {
