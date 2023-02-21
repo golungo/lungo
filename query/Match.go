@@ -11,7 +11,7 @@ func (m Model) Match(filter lungo.Filter) Model {
 		return m
 	}
 
-	if len(filter) != 0 {
+	if len(filter) > 0 {
 		var match bson.D
 
 		for fieldName, fieldValue := range filter {
@@ -26,6 +26,11 @@ func (m Model) Match(filter lungo.Filter) Model {
 								Value: bson.A{fieldValue},
 							},
 						},
+					})
+				case "bool":
+					match = append(match, bson.E{
+						Key:   fieldName,
+						Value: fieldValue == true || fieldValue == "true",
 					})
 				default:
 					match = append(match, bson.E{

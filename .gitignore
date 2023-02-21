@@ -1,1 +1,3 @@
 .DS_Store
+testdata
+lungo_test.go
